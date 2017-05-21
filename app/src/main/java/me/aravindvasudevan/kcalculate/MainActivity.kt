@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    // Updates the display when the number key is pressed
     fun numberPressed(view: View) {
         val button = view as Button
         val digit = button.text
@@ -41,17 +42,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Creates pending operations and executes them when a operation key is pressed
     fun performOperation(view: View) {
         val button = view as Button
         if(display.text != "") {
-            if(pendingOperation == null) {
+            if(pendingOperation == null) { // If no operation is pending
                 if(button.text != "=") {
                     pendingOperation = PendingOperation(display.text.toString().toDouble(), operations[button.text]!!)
                     display.text = ""
                 }
             } else {
-                display.text = performPendingOperation(display.text.toString().toDouble()).toString()
+                display.text = performPendingOperation(display.text.toString().toDouble()).toString() //performs the pending operation
                 pendingOperation = null
+
+                // if the currently pressed key is not "=", then create another pending operation
                 if(button.text != "=") {
                     pendingOperation = PendingOperation(display.text.toString().toDouble(), operations[button.text]!!)
                     display.text = ""
@@ -60,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Clears the display
     fun clearDisplay(view: View) {
         if(userIsInTheMiddleOfTyping) {
             display.text = ""
