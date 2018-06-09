@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
             "×" to {a, b -> a * b}
     )
 
+
+    
     data class PendingOperation(val firstNumber: Double, val operation: (Double, Double) -> Double)
     var pendingOperation: PendingOperation? = null
 
