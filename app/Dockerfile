@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-MAINTAINER Dmitry Karikh <the.dr.hax@gmail.com>
+MAINTAINER Manoj <manoj@cogzidel.com>
 
 # Install Git and dependencies
 RUN dpkg --add-architecture i386 \
