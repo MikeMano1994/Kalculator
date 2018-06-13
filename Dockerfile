@@ -10,8 +10,8 @@ RUN dpkg --add-architecture i386 \
  && rm -rf /var/lib/apt/lists /var/cache/apt
 
 # Set up environment variables
-#ENV ANDROID_HOME="/home/user/android-sdk-linux" \
-ENV ANDROID_HOME="/home/test/Sdk/android-sdk-linux" \
+ENV ANDROID_HOME="/home/user/android-sdk-linux" \
+#ENV ANDROID_HOME="/home/test/Sdk/android-sdk-linux" \
     SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
     GRADLE_URL="https://services.gradle.org/distributions/gradle-4.5.1-all.zip"
 
