@@ -7,7 +7,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     
-    /*def versionPropsFile = file('version.properties')
+    def versionPropsFile = file('version.properties')
 
         if (versionPropsFile.canRead()) {
             def Properties versionProps = new Properties()
@@ -26,9 +26,9 @@ android {
         }
         else {
             throw new GradleException("Could not read version.properties!")
-        }*/
+        }
         
-        task('increaseVersionCode') << {
+   /*     task('increaseVersionCode') << {
     def manifestFile = file("AndroidManifest.xml")
     def pattern = Pattern.compile("versionCode=\"(\\d+)\"")
     def manifestText = manifestFile.getText()
@@ -43,7 +43,7 @@ tasks.whenTaskAdded { task ->
     if (task.name == 'generateReleaseBuildConfig') {
         task.dependsOn 'increaseVersionCode'
     }
-}
+} */
     
     defaultConfig {
         applicationId "me.aravindvasudevan.kcalculate"
