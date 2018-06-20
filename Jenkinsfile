@@ -15,6 +15,3 @@ pipeline {
     } 
   }
 }
-
-#Maven Install
-#mvn clean install
